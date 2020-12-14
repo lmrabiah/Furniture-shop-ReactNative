@@ -3,6 +3,7 @@ import storeStore from "../stores/storeStore";
 import { observer } from "mobx-react";
 import { Text } from "react-native";
 import { Content, List, Spinner } from "native-base";
+
 import OneStore from "./OneStore";
 
 function AllStores() {

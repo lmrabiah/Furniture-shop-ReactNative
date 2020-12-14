@@ -20,7 +20,7 @@ function StoreDetail() {
     <>
       <StoreDetailWrapper>
         <StoreDetailImage source={{ uri: store.img }} />
-        <StoreDetailTitle>{store.name}</StoreDetailTitle>
+        {/* <StoreDetailTitle>{store.name}</StoreDetailTitle> */}
       </StoreDetailWrapper>
       <AllProduct products={productsFromProductStore} />
     </>

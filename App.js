@@ -27,9 +27,9 @@ export default function App() {
     <>
       <View style={styles.container}>
         <ThemeProvider theme={theme.light}>
-          {/* <Home /> */}
+          <Home />
           {/* <AllStores /> */}
-          <StoreDetail />
+          {/* <StoreDetail /> */}
         </ThemeProvider>
         {/* <Text>Open up App.js to start working on your app!</Text> */}
         <StatusBar style="auto" />

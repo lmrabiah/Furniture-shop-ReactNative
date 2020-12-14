@@ -13,7 +13,7 @@ function Home() {
     <HomeBackground
       source={{
         uri:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRGtpqnKCEKfS_q4kSSYYZZe1STU3Xm16gFg&usqp=CAU",
+          "https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0187/gilded-vista-wall-mirror-c.jpg",
       }}
     >
       <OverLayContainer>

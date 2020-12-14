@@ -1,9 +1,9 @@
 import styled from "styled-components/native";
 
 export const HomeBackground = styled.ImageBackground`
-  flex: 0.7;
-  width: 100%;
-  height: 100%;
+  flex: 1;
+  width: 430px;
+  height: 420px;
 `;
 
 export const TopStyling = styled.View`
@@ -14,13 +14,14 @@ export const TopStyling = styled.View`
 
 export const Title = styled.Text`
   color: #fff;
-  font-size: 38;
+  font-size: 40;
   text-align: center;
+  font-family: cursive;
 `;
 
 export const OverLayContainer = styled.View`
   flex: 1;
-  background-color: rgba(100, 40, 60, 0.4);
+  background-color: rgba(100, 60, 60, 0.4);
 `;
 
 export const BottomStyling = styled.View`
@@ -46,12 +47,12 @@ export const StoreDetailWrapper = styled.View`
 `;
 
 export const StoreDetailImage = styled.Image`
-  width: 150;
-  height: 150;
+  width: 300;
+  height: 300;
 `;
 
 export const StoreDetailTitle = styled.Text`
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 40;
 `;
 

@@ -6,8 +6,11 @@ import { Image } from "react-native";
 function OneStore({ store }) {
   return (
     <ListItem>
-      <Image style={{ width: 100, height: 100 }} source={{ uri: store.img }} />
-      <StoreItemStyled>{store.name}</StoreItemStyled>
+      <Image
+        style={{ width: 200, height: 200, marginLeft: 20 }}
+        source={{ uri: store.img }}
+      />
+      {/* <StoreItemStyled>{store.name}</StoreItemStyled> */}
     </ListItem>
   );
 }
