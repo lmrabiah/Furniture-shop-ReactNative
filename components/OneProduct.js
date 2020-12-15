@@ -1,7 +1,7 @@
 import React from "react";
-import { StoreItemStyled } from "../styles";
+import { StoreItemStyled, StorePriceItemStyled } from "../styles";
 import { ListItem } from "native-base";
-import { Image } from "react-native";
+import { Image, View } from "react-native";
 
 const OneProduct = ({ product }) => {
   return (
@@ -11,6 +11,9 @@ const OneProduct = ({ product }) => {
         source={{ uri: product.img }}
       />
       <StoreItemStyled>{product.name}</StoreItemStyled>
+      <View>
+        <StorePriceItemStyled>{product.price}</StorePriceItemStyled>
+      </View>
     </ListItem>
   );
 };

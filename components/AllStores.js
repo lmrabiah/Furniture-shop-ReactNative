@@ -6,10 +6,10 @@ import { Content, List, Spinner } from "native-base";
 
 import OneStore from "./OneStore";
 
-function AllStores() {
+function AllStores({ navigation }) {
   if (storeStore.loading) return <Spinner />;
   const stores = storeStore.stores.map((store) => (
-    <OneStore store={store} key={store.id} />
+    <OneStore navigation={navigation} store={store} key={store.id} />
   ));
 
   return (

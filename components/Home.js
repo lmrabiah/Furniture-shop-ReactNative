@@ -8,7 +8,7 @@ import {
   BottomStyling,
   ButtonStyled,
 } from "../styles";
-function Home() {
+function Home({ navigation }) {
   return (
     <HomeBackground
       source={{
@@ -21,7 +21,7 @@ function Home() {
           <Title>Furnitre Shop</Title>
         </TopStyling>
         <BottomStyling>
-          <ButtonStyled onPress={() => alert("Take me to the list of stores")}>
+          <ButtonStyled onPress={() => navigation.navigate("AllStores")}>
             Click here to skip
           </ButtonStyled>
         </BottomStyling>

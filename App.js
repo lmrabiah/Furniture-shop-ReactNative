@@ -2,11 +2,8 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { ThemeProvider } from "styled-components";
-import AllStores from "./components/AllStores";
-//components
-import Home from "./components/Home";
-import StoreDetail from "./components/StoreDetail";
-
+import { NavigationContainer } from "@react-navigation/native";
+import RootNavigator from "./components/Navigation";
 const theme = {
   light: {
     mainColor: "#54601A",
@@ -24,17 +21,14 @@ const theme = {
 };
 export default function App() {
   return (
-    <>
-      <View style={styles.container}>
-        <ThemeProvider theme={theme.light}>
-          <Home />
-          {/* <AllStores /> */}
-          {/* <StoreDetail /> */}
-        </ThemeProvider>
-        {/* <Text>Open up App.js to start working on your app!</Text> */}
-        <StatusBar style="auto" />
-      </View>
-    </>
+    <ThemeProvider theme={theme.light}>
+      <NavigationContainer>
+        <RootNavigator />
+      </NavigationContainer>
+
+      {/* <Text>Open up App.js to start working on your app!</Text> */}
+      <StatusBar style="auto" />
+    </ThemeProvider>
   );
 }
 

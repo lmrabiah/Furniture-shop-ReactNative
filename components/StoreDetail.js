@@ -10,8 +10,9 @@ import storeStore from "../stores/storeStore";
 import productStore from "../stores/productStore";
 import AllProduct from "./AllProduct";
 
-function StoreDetail() {
-  const store = storeStore.stores[2];
+function StoreDetail({ navigation, route }) {
+  // const store = storeStore.stores[2];
+  const { store } = route.params;
   if (storeStore.loading) return <Spinner />;
   const productsFromProductStore = store.products.map((product) =>
     productStore.getProductId(product.id)

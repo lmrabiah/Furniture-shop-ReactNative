@@ -16,7 +16,6 @@ export const Title = styled.Text`
   color: #fff;
   font-size: 40;
   text-align: center;
-  font-family: cursive;
 `;
 
 export const OverLayContainer = styled.View`
@@ -49,6 +48,7 @@ export const StoreDetailWrapper = styled.View`
 export const StoreDetailImage = styled.Image`
   width: 300;
   height: 300;
+  margin-left: 60;
 `;
 
 export const StoreDetailTitle = styled.Text`
@@ -60,7 +60,17 @@ export const StoreItemStyled = styled.Text`
   color: ${(props) => props.theme.mainColor};
   font-size: 18;
   margin-top: 10;
-  margin-bottom: 10;
+  /* margin-bottom: 10; */
   margin-left: 16;
   width: 100%;
+`;
+
+export const StorePriceItemStyled = styled.Text`
+  color: ${(props) => props.theme.mainColor};
+  font-size: 18;
+  /* margin-bottom: 40;
+  margin-bottom: 30;
+  margin-left: 100;
+
+  width: 100%; */
 `;
