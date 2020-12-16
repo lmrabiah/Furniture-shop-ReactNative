@@ -85,5 +85,29 @@ export const TotalPrice = styled.Text`
 
 export const CartButtonStyled = styled(Icon)`
   color: ${(props) => props.theme.backgroundColor};
-  margin-right: 10px;
+  margin-right: 15px;
+  margin-bottom: 17px;
+`;
+
+export const CartTextStyled = styled.Text`
+  color: ${(props) => props.theme.backgroundColor};
+  font-size: 20px;
+`;
+
+export const TrashIcon = styled(Icon)`
+  color: ${(props) => props.theme.mainColor};
+`;
+
+export const CheckoutButton = styled.TouchableOpacity`
+  align-self: stretch;
+  align-items: center;
+  padding: 20px;
+  background-color: lightgray;
+  margin-top: 30px;
+`;
+
+export const CheckoutButtonText = styled.Text`
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
 `;

@@ -9,7 +9,6 @@ class ProductStore {
     makeObservable(this, {
       products: observable,
       loading: observable,
-
       fetchProducts: action,
     });
   }

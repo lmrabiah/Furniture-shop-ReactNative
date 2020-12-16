@@ -2,18 +2,24 @@ import React from "react";
 //i will import Icon  in styles
 // import { Icon } from "native-base";
 import { useNavigation } from "@react-navigation/native";
-
+import { observer } from "mobx-react";
 //styles
-import { CartButtonStyled } from "../../styles";
+import { CartButtonStyled, CartTextStyled } from "../../styles";
+//stores
+import cartStore from "../../stores/cartStore";
 
 const CartButton = () => {
   const navigation = useNavigation();
   return (
-    <CartButtonStyled
-      type="MaterialCommunityIcons"
-      name="cart"
-      onPress={() => navigation.navigate("Cart")}
-    />
+    <>
+      <CartTextStyled>{cartStore.totalQuantity}</CartTextStyled>
+
+      <CartButtonStyled
+        type="MaterialCommunityIcons"
+        name="cart"
+        onPress={() => navigation.navigate("Cart")}
+      />
+    </>
   );
 };
-export default CartButton;
+export default observer(CartButton);

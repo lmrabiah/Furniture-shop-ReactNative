@@ -39,7 +39,18 @@ const OneProduct = ({ product }) => {
           totalWidth={60}
           initValue={quantity}
         />
-        <Button onPress={handleAdd}>
+        <Button
+          style={{
+            backgroundColor: "lightgrey",
+            fontSize: 14,
+            marginTop: 10,
+            marginRight: 4,
+            width: 50,
+            height: 30,
+            justifyContent: "center",
+          }}
+          onPress={handleAdd}
+        >
           <Text>Add</Text>
         </Button>
       </Right>
