@@ -1,8 +1,10 @@
 import React from "react";
-import { Text } from "react-native";
-import { ListItem } from "native-base";
-import { StoreItemStyled } from "../styles";
 import { Image } from "react-native";
+import { ListItem } from "native-base";
+
+//Styles
+import { StoreItemStyled } from "../styles";
+
 function OneStore({ store, navigation }) {
   return (
     <ListItem

@@ -10,7 +10,7 @@ import storeStore from "../stores/storeStore";
 import productStore from "../stores/productStore";
 import AllProduct from "./AllProduct";
 
-function StoreDetail({ navigation, route }) {
+function StoreDetail({ route }) {
   // const store = storeStore.stores[2];
   const { store } = route.params;
   if (storeStore.loading) return <Spinner />;
