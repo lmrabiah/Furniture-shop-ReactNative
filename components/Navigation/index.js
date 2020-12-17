@@ -1,19 +1,21 @@
+import { createStackNavigator } from "@react-navigation/stack";
+import React from "react";
 //components
 import CartList from "../CartList";
 import Home from "../Home";
 import StoreDetail from "../StoreDetail";
 import AllStores from "../AllStores";
-import { createStackNavigator } from "@react-navigation/stack";
-import React from "react";
-import CartButton from "../buttons/CartButton";
 
+import CartButton from "../buttons/CartButton";
+import Signin from "../authentication/Signin";
+import Signup from "../authentication/Signup";
 const RootNavigator = () => {
   const { Navigator, Screen } = createStackNavigator();
 
   return (
     <>
       <Navigator
-        initialRouteName="AllStores"
+        initialRouteName="Signin"
         screenOptions={{
           headerTintColor: "#f1f1f1",
           headerStyle: {
@@ -48,6 +50,16 @@ const RootNavigator = () => {
         />
 
         <Screen name="Cart" component={CartList} />
+        <Screen
+          name="Signin"
+          component={Signin}
+          options={{ headerShown: false }}
+        />
+        <Screen
+          name="Signup"
+          component={Signup}
+          options={{ headerShown: false }}
+        />
       </Navigator>
     </>
   );

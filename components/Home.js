@@ -1,5 +1,5 @@
 import React from "react";
-
+//styles
 import {
   HomeBackground,
   TopStyling,
@@ -8,6 +8,7 @@ import {
   BottomStyling,
   ButtonStyled,
 } from "../styles";
+
 function Home({ navigation }) {
   return (
     <HomeBackground

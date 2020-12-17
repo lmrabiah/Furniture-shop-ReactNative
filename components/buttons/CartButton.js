@@ -4,7 +4,7 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { observer } from "mobx-react";
 //styles
-import { CartButtonStyled, CartTextStyled } from "../../styles";
+import { CartButtonStyled, CartTextStyled, TotalPrice } from "../../styles";
 //stores
 import cartStore from "../../stores/cartStore";
 
@@ -13,6 +13,8 @@ const CartButton = () => {
   return (
     <>
       <CartTextStyled>{cartStore.totalQuantity}</CartTextStyled>
+
+      {/* <TotalPrice>{item.price * item.quantity} KD</TotalPrice> */}
 
       <CartButtonStyled
         type="MaterialCommunityIcons"
