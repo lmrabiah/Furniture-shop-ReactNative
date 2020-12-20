@@ -15,7 +15,7 @@ const RootNavigator = () => {
   return (
     <>
       <Navigator
-        initialRouteName="Signin"
+        initialRouteName="Home"
         screenOptions={{
           headerTintColor: "#f1f1f1",
           headerStyle: {
