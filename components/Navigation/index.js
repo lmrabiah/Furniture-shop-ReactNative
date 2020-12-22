@@ -5,6 +5,7 @@ import CartList from "../CartList";
 import Home from "../Home";
 import StoreDetail from "../StoreDetail";
 import AllStores from "../AllStores";
+import { Button } from "react-native";
 
 import CartButton from "../buttons/CartButton";
 import Signin from "../authentication/Signin";
@@ -32,7 +33,7 @@ const RootNavigator = () => {
           name="AllStores"
           component={AllStores}
           options={{
-            title: "Choose a Bakery",
+            title: "Choose a Store",
             headerRight: () => <CartButton />,
           }}
         />

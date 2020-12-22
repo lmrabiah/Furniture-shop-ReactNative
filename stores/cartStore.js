@@ -1,6 +1,7 @@
 import { makeAutoObservable } from "mobx";
 //To  keep our items from being deleted
 import AsyncStorage from "@react-native-community/async-storage";
+import instance from "./instance";
 
 class CartStore {
   items = [];
@@ -32,9 +33,16 @@ class CartStore {
     this.items = this.items.filter((item) => item.productId !== itemId);
     await AsyncStorage.setItem("myCart", JSON.stringify(this.items));
   };
-  checkout = () => {
-    this.items = [];
-    alert("you have Checkout");
+  checkout = async () => {
+    try {
+      const res = await instance.post("/checkout", this.items);
+      console.log("CartStore -> checkout -> res", res.data);
+      this.items = [];
+      await AsyncStorage.setItem("myCart", JSON.stringify(this.items));
+      alert("You have successfully checked out.");
+    } catch (error) {
+      console.log("CartStore -> checkout -> error", error);
+    }
   };
 }
 const cartStore = new CartStore();
